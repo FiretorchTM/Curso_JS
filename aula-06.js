@@ -26,4 +26,4 @@ idade++;
 }while(idade < 18);
 console.log("")
 console.log("finalmente: " + ano + " e eu posso entrar na festa!")
-console.log("pode entrar voce tem: ", idade +);
+console.log("pode entrar voce tem:", idade , "anos");//com "," não precisa dar espaço para separar as variaveis/frases de output.
