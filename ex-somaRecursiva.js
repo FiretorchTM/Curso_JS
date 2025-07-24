@@ -4,7 +4,7 @@ function gerarRecursiva(n) {
     {
         return 1;
     }
-
+//visto
     return n + gerarRecursiva(n - 1);
 }
 
