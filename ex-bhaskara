@@ -1,0 +1,28 @@
+// Função para calcular as raízes de uma equação do 2º grau usando a fórmula de Bhaskara
+function bhaskara(a, b, c) {
+    // Calcula o discriminante (delta) da fórmula: delta = b² - 4ac
+    let delta = b * b - 4 * a * c;
+
+    // Se delta for negativo, não existem raízes reais (raízes complexas)
+    if (delta < 0) {
+        return "não existe raízes reais.";
+    }
+    // Se delta for zero, existe uma raiz única (raiz dupla)
+    else if (delta === 0) {
+        // Calcula a raiz única usando -b / (2a)
+        const x = -b / (2 * a);
+        return `raiz única: x = ${x}`;
+    }
+    // Se delta for positivo, existem duas raízes reais e diferentes
+    else {
+        // Calcula a primeira raiz usando (+) a raiz quadrada de delta
+        const x1 = (-b + Math.sqrt(delta)) / (2 * a);
+        // Calcula a segunda raiz usando (-) a raiz quadrada de delta
+        const x2 = (-b - Math.sqrt(delta)) / (2 * a);
+        return `Duas raízes: x1 = ${x1}, x2 = ${x2}`;
+    }
+}
+
+// Exemplo de uso: calcular raízes da equação x² - 3x + 2 = 0
+console.log(bhaskara(1, -3, 2));
+                  //(x²,-3x ,2)
